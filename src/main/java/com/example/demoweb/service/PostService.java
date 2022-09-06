@@ -11,11 +11,18 @@ import java.util.List;
 @Service
 public class PostService {
 
+    public ArrayList<Post> posts = new ArrayList<>();
+
+    {
+        posts.add(new Post("Мужик",new Date(1978, 4,1,10,32),10));
+        posts.add(new Post("Девушка",new Date(1978, 7,1,12,59),1000));
+        posts.add(new Post("Мальчик",new Date(1978, 9,1,3,11),0));
+    }
     public ArrayList<Post> listAllPosts(){
-        ArrayList<Post> list = new ArrayList<Post>();
-        list.add(new Post("Мужик",new Date(1978, 4,1,10,32),10));
-        list.add(new Post("Девушка",new Date(1978, 7,1,12,59),1000));
-        list.add(new Post("Мальчик",new Date(1978, 9,1,3,11),0));
-        return list;
+        return posts;
+    }
+
+    public void create(String text) {
+        posts.add(new Post(text, new Date()));
     }
 }

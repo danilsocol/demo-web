@@ -12,6 +12,17 @@ public class Post {
         likes = _likes;
         creationDate = _creationDate;
     }
+
+    public Post(String _text,Date _creationDate){
+        text = _text;
+        likes = 0;
+        creationDate = _creationDate;
+    }
+
+
+    public void Get(){
+
+    }
     public String getText(){
         return text;
     }
