@@ -7,22 +7,31 @@ public class Post {
     private Integer likes;
     private Date creationDate;
 
-    public Post(String _text,Date _creationDate, Integer _likes){
+    private Long id;
+
+    public Post(Long _id ,String _text,Date _creationDate, Integer _likes){
+        id = _id;
         text = _text;
         likes = _likes;
         creationDate = _creationDate;
     }
 
-    public Post(String _text,Date _creationDate){
+    public Post(Long _id, String _text,Date _creationDate){
+        id = _id;
         text = _text;
         likes = 0;
         creationDate = _creationDate;
     }
 
-
-    public void Get(){
-
+    public void setLikes(Integer _likes){
+        likes = _likes ;
     }
+
+    public Long getId(){
+        return id;
+    }
+
+
     public String getText(){
         return text;
     }
